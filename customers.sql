@@ -1,5 +1,3 @@
-CREATE DATABASE "eshop.customers"
-\c eshop.customers
 CREATE TABLE public."Customers"
 (
   "CustomerId" text COLLATE pg_catalog."default" NOT NULL,

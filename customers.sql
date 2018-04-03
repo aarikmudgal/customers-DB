@@ -12,4 +12,4 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE public."Customers" OWNER to "DotNetCoreUser";
+ALTER TABLE public."Customers" OWNER to "postgres";

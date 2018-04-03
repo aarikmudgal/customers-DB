@@ -4,4 +4,4 @@ FROM postgres
 COPY customers.sql /customers.sql
 CMD "psql -U postgres"
 CMD "CREATE DATABASE "eshop.customers";"
-CMD ["psql -U postgres -d "eshop.customers" -f customers.sql"]
+CMD "psql -U postgres -d "eshop.customers" -f customers.sql"

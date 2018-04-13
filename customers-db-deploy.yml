@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.customers-db: glob:release-*
+  name: api-customers
+spec:
+  minReadySeconds: 5
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: customers-db
+    spec:
+      containers:
+      - name: customers-db
+        image: gcr.io/ancient-yeti-166518/customers-db
+        ports:
+        - containerPort: 8001
